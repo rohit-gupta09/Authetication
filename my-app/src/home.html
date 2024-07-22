@@ -1,0 +1,29 @@
+<html>
+    <head>
+<title>Heeke</title>
+    </head>
+    <body>
+        <button onClick="Hello()">SUbmit</button>
+        <script>
+            const data={
+                name:"ROhit",
+                password:"dhfsbf"
+            }
+
+            async function Hello(){
+               const res= await fetch("http://localhost:1234/api/register",{
+                body:JSON.stringify(data),
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            })
+
+            const data1=await res.json() 
+            console.log(data1)
+            }
+
+            
+        </script>
+    </body>
+</html>
